@@ -5,19 +5,19 @@
   
 
   
-  <title>Hello World | Marshall&amp;Yannie</title>
+  <title>理解REST, 以及RESTful | Marshall&amp;Yannie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="REST全称 : Resource Representational State Transfer 翻译 : 资源在网络中以某种表现形式进行状态转移 理解 : 选择通过使用http协议和uri, 利用client/server model 对资源进行CRUD 通俗 : 看url就知道要干什么,看http methond 就知道要干什么,看http status code 就知道请求结果 自我理解:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="marshallchang.github.io/2018/06/04/hello-world/index.html">
+<meta property="og:title" content="理解REST, 以及RESTful">
+<meta property="og:url" content="marshallchang.github.io/2018/04/19/rest-restful/index.html">
 <meta property="og:site_name" content="Marshall&amp;Yannie">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="REST全称 : Resource Representational State Transfer 翻译 : 资源在网络中以某种表现形式进行状态转移 理解 : 选择通过使用http协议和uri, 利用client/server model 对资源进行CRUD 通俗 : 看url就知道要干什么,看http methond 就知道要干什么,看http status code 就知道请求结果 自我理解:">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-06-04T09:07:25.065Z">
+<meta property="og:updated_time" content="2018-06-04T12:00:23.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="理解REST, 以及RESTful">
+<meta name="twitter:description" content="REST全称 : Resource Representational State Transfer 翻译 : 资源在网络中以某种表现形式进行状态转移 理解 : 选择通过使用http协议和uri, 利用client/server model 对资源进行CRUD 通俗 : 看url就知道要干什么,看http methond 就知道要干什么,看http status code 就知道请求结果 自我理解:">
   
     <link rel="alternate" href="/atom.xml" title="Marshall&amp;Yannie" type="application/atom+xml">
   
@@ -64,12 +64,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-rest-restful" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/06/04/hello-world/" class="article-date">
-  <time datetime="2018-06-04T09:07:25.065Z" itemprop="datePublished">2018-06-04</time>
+    <a href="/2018/04/19/rest-restful/" class="article-date">
+  <time datetime="2018-04-19T09:12:13.000Z" itemprop="datePublished">2018-04-19</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technology/">Technology</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      理解REST, 以及RESTful
     </h1>
   
 
@@ -86,20 +90,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h1><p>全称 : Resource Representational State Transfer 翻译 : 资源在网络中以某种表现形式进行状态转移 理解 : 选择通过使用http协议和uri, 利用client/server model 对资源进行CRUD 通俗 : 看url就知道要干什么,看http methond 就知道要干什么,看http status code 就知道请求结果 自我理解: 以往对url的定义是: 打开电脑 /start/computer 关闭电脑 /stop/computer 以RESTful风格来写的话就是: 打开电脑 /computer, http method :GET 关闭电脑 /computer ,http method : PUT</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="marshallchang.github.io/2018/06/04/hello-world/" data-id="cji07el8t00085tb79e71fjgn" class="article-share-link">Share</a>
+      <a data-url="marshallchang.github.io/2018/04/19/rest-restful/" data-id="cji07el8w000b5tb76ely223u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,10 +104,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2018/04/19/spring-boot-e9-9b-86-e6-88-90-resteasy/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Spring Boot 集成 RESTeasy
+        
+      </div>
+    </a>
   
-    <a href="/2018/05/08/vscode03/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2018/04/18/docker-2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Visual Studio Code Extensions 发布到Marketplace</div>
+      <div class="article-nav-title">个人对docker的理解</div>
     </a>
   
 </nav>
