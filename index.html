@@ -484,7 +484,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-04 20:00:23" itemprop="dateModified" datetime="2018-06-04T20:00:23+08:00">2018-06-04</time>
+                <time title="修改时间：2018-07-05 11:40:31" itemprop="dateModified" datetime="2018-07-05T11:40:31+08:00">2018-07-05</time>
               
             
           </span>
@@ -537,13 +537,7 @@
       
         
           
-            <p>插件编写完成后,使用npm 安装vsce <code>npm install -g vsce</code> <code>vsce --help</code>查看帮助命令 登陆<a href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener">Visual Studio</a> 进行一个团队的注册 创建 <code>Personal Access Token</code> 并进行保存 在插件项目中使用 vsce package 进行打包动作,生成 <code>.vsix</code>文件,在应用市场上传的时候只上传该文件即可. 该插件项目需要在package.json 中声明</p>
-<blockquote>
-<p><code>&quot;repository&quot;: {</code></p>
-<p><code>&quot;type&quot;: &quot;git&quot;,</code></p>
-<p><code>&quot;url&quot;:&quot;https://github.com/MarshallChang/vscode-faa-java-js-html- template.git&quot;</code></p>
-<p><code>}</code></p>
-</blockquote>
+            <p>插件编写完成后,使用npm 安装vsce <code>npm install -g vsce</code> <code>vsce --help</code>查看帮助命令 登陆<a href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener">Visual Studio</a> 进行一个团队的注册 创建 <code>Personal Access Token</code> 并进行保存 在插件项目中使用 vsce package 进行打包动作,生成 <code>.vsix</code>文件,在应用市场上传的时候只上传该文件即可. 该插件项目需要在package.json 中声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;repository&quot;: &#123;</span><br><span class="line">	&quot;type&quot;: &quot;git&quot;,</span><br><span class="line">	&quot;url&quot;:&quot;https://github.com/MarshallChang/vscode-faa-java-js-html- template.git&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>在创建项目之初就将项目上传到github 是一个明智之举, 另外在进行打包动作时,<code>README.md</code>文件中也应该进行自己插件的一个描述,否则会打包检查失败造成无法打包. 之后即可在应用市场搜索下载 <code>package.json</code>文件中 <code>engines</code>指定了该插件最低兼容的软件版本,如无法安装请安装最新版本的vscode.</p>
 
           
@@ -661,7 +655,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-04 20:00:23" itemprop="dateModified" datetime="2018-06-04T20:00:23+08:00">2018-06-04</time>
+                <time title="修改时间：2018-07-05 11:53:45" itemprop="dateModified" datetime="2018-07-05T11:53:45+08:00">2018-07-05</time>
               
             
           </span>
@@ -714,70 +708,12 @@
       
         
           
-            <p>为提高代码的复用性和开发的效率 编写了一套vscode的代码片段插件 <a href="http://www.marnnie.com/2018/05/08/vscode01/" target="_blank" rel="noopener">Visual Studio Code Extension–编写</a> 生成好基础的代码之后(js/ts)差别不大 重点在 <code>package.json</code> For Example:</p>
-<blockquote>
-<p><code>{</code></p>
-<p><code>&quot;name&quot;: &quot;faa-java-js-html-template&quot;,</code></p>
-<p><code>&quot;displayName&quot;: &quot;Faa-java&amp;js&amp;html-template&quot;,</code></p>
-<p><code>&quot;description&quot;: &quot;services for the faa&#39;project&quot;,</code></p>
-<p><code>&quot;version&quot;: &quot;0.0.1&quot;,</code></p>
-<p><code>&quot;publisher&quot;: &quot;MarshallChang&quot;,</code></p>
-<p><code>&quot;engines&quot;: {</code></p>
-<p><code>&quot;vscode&quot;: &quot;^1.23.0&quot;</code></p>
-<p><code>},</code></p>
-<p><code>&quot;categories&quot;: [</code></p>
-<p><code>&quot;Snippets&quot;</code></p>
-<p><code>],</code></p>
-<p><code>&quot;activationEvents&quot;: [</code></p>
-<p><code>],</code></p>
-<p><code>&quot;main&quot;: &quot;./extension&quot;,</code></p>
-<p><code>&quot;contributes&quot;: {</code></p>
-<p><code>&quot;snippets&quot;: [</code></p>
-<p><code>{</code></p>
-<p><code>&quot;language&quot;: &quot;java&quot;,</code></p>
-<p><code>&quot;path&quot;: &quot;./snippets.json&quot;</code></p>
-<p><code>},</code></p>
-<p><code>{</code></p>
-<p><code>&quot;language&quot;: &quot;javascript&quot;,</code></p>
-<p><code>&quot;path&quot;: &quot;./snippets.json&quot;</code></p>
-<p><code>},</code></p>
-<p><code>{</code></p>
-<p><code>&quot;language&quot;: &quot;html&quot;,</code></p>
-<p><code>&quot;path&quot;: &quot;./snippets.json&quot;</code></p>
-<p><code>},</code></p>
-<p><code>{</code></p>
-<p><code>&quot;language&quot;: &quot;properties&quot;,</code></p>
-<p><code>&quot;path&quot;: &quot;./snippets.json&quot;</code></p>
-<p><code>}</code></p>
-<p><code>]</code></p>
-<p><code>},</code></p>
-<p><code>&quot;scripts&quot;: {</code></p>
-<p><code>&quot;postinstall&quot;: &quot;node ./node_modules/vscode/bin/install&quot;,</code></p>
-<p><code>&quot;test&quot;: &quot;node ./node_modules/vscode/bin/test&quot;</code></p>
-<p><code>},</code></p>
-<p><code>&quot;devDependencies&quot;: {</code></p>
-<p><code>&quot;typescript&quot;: &quot;^2.6.1&quot;,</code></p>
-<p><code>&quot;vscode&quot;: &quot;^1.1.6&quot;,</code></p>
-<p><code>&quot;eslint&quot;: &quot;^4.11.0&quot;,</code></p>
-<p><code>&quot;@types/node&quot;: &quot;^7.0.43&quot;,</code></p>
-<p><code>&quot;@types/mocha&quot;: &quot;^2.2.42&quot;</code></p>
-<p><code>}</code></p>
-<p><code>}</code></p>
-</blockquote>
+            <p>为提高代码的复用性和开发的效率 编写了一套vscode的代码片段插件 <a href="http://www.marnnie.com/2018/05/08/vscode01/" target="_blank" rel="noopener">Visual Studio Code Extension–编写</a> 生成好基础的代码之后(js/ts)差别不大 重点在 <code>package.json</code> For Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;name&quot;: &quot;faa-java-js-html-template&quot;,</span><br><span class="line">	&quot;displayName&quot;: &quot;Faa-java&amp;js&amp;html-template&quot;,</span><br><span class="line">	&quot;description&quot;: &quot;services for the faa&apos;project&quot;,</span><br><span class="line">	&quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">	&quot;publisher&quot;: &quot;MarshallChang&quot;,</span><br><span class="line">	&quot;engines&quot;: &#123;</span><br><span class="line">		&quot;vscode&quot;: &quot;^1.23.0&quot;</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;categories&quot;: [</span><br><span class="line">		&quot;Snippets&quot;</span><br><span class="line">	],</span><br><span class="line">	&quot;activationEvents&quot;: [</span><br><span class="line">	],</span><br><span class="line">	&quot;main&quot;: &quot;./extension&quot;,</span><br><span class="line">	&quot;contributes&quot;: &#123;</span><br><span class="line">      &quot;snippets&quot;: [</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;java&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;javascript&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;html&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;properties&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;</span><br><span class="line">      ]</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;scripts&quot;: &#123;</span><br><span class="line">		&quot;postinstall&quot;: &quot;node ./node_modules/vscode/bin/install&quot;,</span><br><span class="line">		&quot;test&quot;: &quot;node ./node_modules/vscode/bin/test&quot;</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;devDependencies&quot;: &#123;</span><br><span class="line">		&quot;typescript&quot;: &quot;^2.6.1&quot;,</span><br><span class="line">		&quot;vscode&quot;: &quot;^1.1.6&quot;,</span><br><span class="line">		&quot;eslint&quot;: &quot;^4.11.0&quot;,</span><br><span class="line">		&quot;@types/node&quot;: &quot;^7.0.43&quot;,</span><br><span class="line">		&quot;@types/mocha&quot;: &quot;^2.2.42&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>其中 <code>contributes</code> 中 <code>snippets</code>里的<code>language</code>为此插件在哪些文件类型下可以正常使用</p>
 <p>不知道文件类型属于什么语言的可以在vscode界面使用 <code>ctrl + shift +p</code> 输入<code>snippet</code> 选择 <code>Preferences: Configure User Snippets</code> 进行查看</p>
 <p>再在插件项目根目录下 新建 <code>snippets.json</code> 文件</p>
 <p>内容示例:</p>
-<blockquote>
-<p><code>{</code></p>
-<p><code>&quot;Faa main application&quot; : {</code></p>
-<p><code>&quot;prefix&quot; : &quot;faa-app&quot;,</code></p>
-<p><code>&quot;body&quot; : &quot;abc\n\t&quot;,</code></p>
-<p><code>&quot;description&quot; : &quot;Faa main application&quot;,</code></p>
-<p><code>&quot;scope&quot; : &quot;&quot;</code></p>
-<p><code>}</code></p>
-<p><code>}</code></p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;Faa main application&quot; : &#123;</span><br><span class="line">		&quot;prefix&quot; : &quot;faa-app&quot;,</span><br><span class="line">		&quot;body&quot; : &quot;abc\n\t&quot;,</span><br><span class="line">		&quot;description&quot; : &quot;Faa main application&quot;,</span><br><span class="line">		&quot;scope&quot; : &quot;&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>完成代码片段的编写</p>
 
           
