@@ -553,10 +553,15 @@
       
         
           
-            <p>插件编写完成后,使用npm 安装vsce <code>npm install -g vsce</code> <code>vsce --help</code>查看帮助命令 登陆<a href="https://marketplace.visualstudio.com/" target="_blank" rel="noopener">Visual Studio</a> 进行一个团队的注册 创建 <code>Personal Access Token</code> 并进行保存 在插件项目中使用 vsce package 进行打包动作,生成 <code>.vsix</code>文件,在应用市场上传的时候只上传该文件即可. 该插件项目需要在package.json 中声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;repository&quot;: &#123;</span><br><span class="line">	&quot;type&quot;: &quot;git&quot;,</span><br><span class="line">	&quot;url&quot;:&quot;https://github.com/MarshallChang/vscode-faa-java-js-html- template.git&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在创建项目之初就将项目上传到github 是一个明智之举, 另外在进行打包动作时,<code>README.md</code>文件中也应该进行自己插件的一个描述,否则会打包检查失败造成无法打包. 之后即可在应用市场搜索下载 <code>package.json</code>文件中 <code>engines</code>指定了该插件最低兼容的软件版本,如无法安装请安装最新版本的vscode.</p>
-
-          
+          插件编写完成后,使用npm 安装vsce npm install -g vsce vsce --help查看帮助命令 登陆Visual Studio 进行一个团队的注册 创建 Personal Access Token 并进行保存 在插件项目中使用 vsce package 进行打包动作,生成 .v
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/08/vscode03/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -724,15 +729,15 @@
       
         
           
-            <p>为提高代码的复用性和开发的效率 编写了一套vscode的代码片段插件 <a href="http://www.marnnie.com/2018/05/08/vscode01/" target="_blank" rel="noopener">Visual Studio Code Extension–编写</a> 生成好基础的代码之后(js/ts)差别不大 重点在 <code>package.json</code> For Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;name&quot;: &quot;faa-java-js-html-template&quot;,</span><br><span class="line">	&quot;displayName&quot;: &quot;Faa-java&amp;js&amp;html-template&quot;,</span><br><span class="line">	&quot;description&quot;: &quot;services for the faa&apos;project&quot;,</span><br><span class="line">	&quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">	&quot;publisher&quot;: &quot;MarshallChang&quot;,</span><br><span class="line">	&quot;engines&quot;: &#123;</span><br><span class="line">		&quot;vscode&quot;: &quot;^1.23.0&quot;</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;categories&quot;: [</span><br><span class="line">		&quot;Snippets&quot;</span><br><span class="line">	],</span><br><span class="line">	&quot;activationEvents&quot;: [</span><br><span class="line">	],</span><br><span class="line">	&quot;main&quot;: &quot;./extension&quot;,</span><br><span class="line">	&quot;contributes&quot;: &#123;</span><br><span class="line">      &quot;snippets&quot;: [</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;java&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;javascript&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;html&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">              &quot;language&quot;: &quot;properties&quot;,</span><br><span class="line">              &quot;path&quot;: &quot;./snippets.json&quot;</span><br><span class="line">          &#125;</span><br><span class="line">      ]</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;scripts&quot;: &#123;</span><br><span class="line">		&quot;postinstall&quot;: &quot;node ./node_modules/vscode/bin/install&quot;,</span><br><span class="line">		&quot;test&quot;: &quot;node ./node_modules/vscode/bin/test&quot;</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;devDependencies&quot;: &#123;</span><br><span class="line">		&quot;typescript&quot;: &quot;^2.6.1&quot;,</span><br><span class="line">		&quot;vscode&quot;: &quot;^1.1.6&quot;,</span><br><span class="line">		&quot;eslint&quot;: &quot;^4.11.0&quot;,</span><br><span class="line">		&quot;@types/node&quot;: &quot;^7.0.43&quot;,</span><br><span class="line">		&quot;@types/mocha&quot;: &quot;^2.2.42&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>其中 <code>contributes</code> 中 <code>snippets</code>里的<code>language</code>为此插件在哪些文件类型下可以正常使用</p>
-<p>不知道文件类型属于什么语言的可以在vscode界面使用 <code>ctrl + shift +p</code> 输入<code>snippet</code> 选择 <code>Preferences: Configure User Snippets</code> 进行查看</p>
-<p>再在插件项目根目录下 新建 <code>snippets.json</code> 文件</p>
-<p>内容示例:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;Faa main application&quot; : &#123;</span><br><span class="line">		&quot;prefix&quot; : &quot;faa-app&quot;,</span><br><span class="line">		&quot;body&quot; : &quot;abc\n\t&quot;,</span><br><span class="line">		&quot;description&quot; : &quot;Faa main application&quot;,</span><br><span class="line">		&quot;scope&quot; : &quot;&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>完成代码片段的编写</p>
-
-          
+          为提高代码的复用性和开发的效率 编写了一套vscode的代码片段插件 Visual Studio Code Extension–编写 生成好基础的代码之后(js/ts)差别不大 重点在 package.json For Example:12345678910111213141516171819202
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/08/vscode02/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -900,13 +905,17 @@
       
         
           
-            <p>首先安装Node环境 通过cmd 执行 <code>npm install -g yo generator-code</code> 通过此命令安装生产插件代码的工具 安装完成后,进入需要生成插件代码的文件夹执行 <code>yo code</code> 来生成基本代码</p>
-<blockquote>
-<p>. ├── .gitignore //配置不需要加入版本管理的文件  ├── .vscode // VS Code的整合  │      ├── launch.json │      ├── settings.json │      └── tasks.json ├── .vscodeignore //配置不需要加入最终发布到拓展中的文件  ├── README.md ├── src // 源文件  │      └── extension.ts // 如果我们使用js来开发拓展，则该文件的后缀为.js  ├── test // test文件夹  │      ├── extension.test.ts // 如果我们使用js来开发拓展，则该文件的后缀为.js  │      └── index.ts // 如果我们使用js来开发拓展，则该文件的后缀为.js  ├── node_modules │      ├── vscode // vscode对typescript的语言支持。  │      └── typescript // TypeScript的编译器  ├── out // 编译之后的输出文件夹(只有TypeScript需要，JS无需)  │      ├── src │       |      ├── extension.js │       |      └── extension.js.map  │      └── test │             ├── extension.test.js │             ├── extension.test.js.map  │             ├── index.js │             └── index.js.map  ├── package.json // 该拓展的资源配置文件  ├── tsconfig.json // ├── typings // 类型定义文件夹  │      ├── node.d.ts // 和Node.js关联的类型定义  │      └── vscode-typings.d.ts // 和VS Code关联的类型定义  └── vsc-extension-quickstart.md</p>
-</blockquote>
-<p>通过vscode 将该目录打开 ,运行试用<code>F5</code></p>
+          首先安装Node环境 通过cmd 执行 npm install -g yo generator-code 通过此命令安装生产插件代码的工具 安装完成后,进入需要生成插件代码的文件夹执行 yo code 来生成基本代码
 
-          
+. ├── .gitignore //配置不需要加入版本管理的文件  ├── .
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/08/vscode01/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1074,9 +1083,16 @@
       
         
           
-            <p>神农山五一烧烤一日游 为庆祝 marshall&amp;yannie 的成功订婚 特在五一假期组织野外烧烤活动, 羊肉串管饱!饮料管够!啤酒小龙虾自带. 下方留言 谁家几口人!</p>
+          神农山五一烧烤一日游 为庆祝 marshall&amp;yannie 的成功订婚 特在五一假期组织野外烧烤活动, 羊肉串管饱!饮料管够!啤酒小龙虾自带. 下方留言 谁家几口人!
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/25/bbq/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1244,13 +1260,17 @@
       
         
           
-            <p>错误:</p>
-<blockquote>
-<p>One of the configured repositories failed (Docker CE Stable - x86_64), and yum doesn’t have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few ways to work “fix” this: 1. Contact the upstream for the repository and get them to fix the problem. 2. Reconfigure the baseurl/etc. for the repository, to point to a working upstream. This is most often useful if you are using a newer distribution release than is supported by the repository (and the packages for the previous distribution release still work). 3. Run the command with the repository temporarily disabled yum –disablerepo=docker-ce-stable … 4. Disable the repository permanently, so yum won’t use it by default. Yum will then just ignore the repository until you permanently enable it again or use –enablerepo for temporary usage: yum-config-manager –disable docker-ce-stable or subscription-manager repos –disable=docker-ce-stable 5. Configure the failing repository to be skipped, if it is unavailable. Note that yum will try to contact the repo. when it runs most commands, so will have to try and fail each time (and thus. yum will be be much slower). If it is a very temporary problem though, this is often a nice compromise: yum-config-manager –save –setopt=docker-ce-stable.skip_if_unavailable=true failure: repodata/repomd.xml from docker-ce-stable: [Errno 256] No more mirrors to try. <a href="https://download-stage.docker.com/linux/centos/7/x86\_64/stable/repodata/repomd.xml" target="_blank" rel="noopener">https://download-stage.docker.com/linux/centos/7/x86\_64/stable/repodata/repomd.xml</a>: [Errno 14] curl#7 - “Failed to connect to 2600:9000:2012:6c00:4:1d08:9b80:93a1: 网络不可达”</p>
-</blockquote>
-<p>错误原因:docker-ce.repo中配置的镜像站无法找到对应的镜像 解决办法:将docker-ce.repo(linux查找方法: find -name docker-ce.repo) 中的镜像地址替换为中科院提供的镜像地址 [docker-ce-stable] name=Docker CE Stable - $basearch baseurl=<a href="https://mirrors.ustc.edu.cn/docker-ce/linux/centos/7/$basearch/stable" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/docker-ce/linux/centos/7/$basearch/stable</a> enabled=1 gpgcheck=1 gpgkey=<a href="https://mirrors.ustc.edu.cn/docker-ce/linux/centos/gpg" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/docker-ce/linux/centos/gpg</a></p>
+          错误:
 
-          
+One of the configured repositories failed (Docker CE Stable - x86_64), and yum doesn’t have enough cached data to continue. At this point the onl
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/24/centos-7-docker/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1418,72 +1438,22 @@
       
         
           
-            <p>JAX-RS 是代表restful web service 的一套规范api,基于java,用来陈篡关键RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解</p>
-<p>序号</p>
-<p>注解</p>
-<p>描述</p>
-<p>1</p>
-<p><strong>@Path</strong></p>
-<p>类或者方法的相对地址，标注在类或者方法上</p>
-<p>2</p>
-<p><strong>@GET</strong></p>
-<p>HTTP GET请求用，用来获取资源</p>
-<p>3</p>
-<p><strong>@PUT</strong></p>
-<p>HTTP PUT 请求，用来创建资源</p>
-<p>4</p>
-<p><strong>@POST</strong></p>
-<p>HTTP POST 请求, 用来创建或者更新资源</p>
-<p>5</p>
-<p><strong>@DELETE</strong></p>
-<p>HTTP DELETE请求, 用来删除资源</p>
-<p>6</p>
-<p><strong>@HEAD</strong></p>
-<p>HTTP HEAD请求, 用来获取一个接口是否可用的状态</p>
-<p>7</p>
-<p><strong>@Produces</strong></p>
-<p>返回数据的格式比如APPLICATION/XML, TEXT/HTML, APPLICATION/JSON</p>
-<p>8</p>
-<p><strong>@Consumes</strong></p>
-<p>请求数据格式 , 如json</p>
-<p>9</p>
-<p><strong>@PathParam</strong></p>
-<p>绑定url里面的参数</p>
-<p>10</p>
-<p><strong>@QueryParam</strong></p>
-<p>绑定url后面的参数（？后面的）</p>
-<p>11</p>
-<p><strong>@MatrixParam</strong></p>
-<p>绑定包含多个 property (属性)=value(值) 方法参数表达式</p>
-<p>12</p>
-<p><strong>@HeaderParam</strong></p>
-<p>给header里面传参</p>
-<p>13</p>
-<p><strong>@CookieParam</strong></p>
-<p>给cookie里面传参</p>
-<p>14</p>
-<p><strong>@FormParam</strong></p>
-<p>给form传参</p>
-<p>15</p>
-<p><strong>@DefaultValue</strong></p>
-<p>给参数一个默认值</p>
-<p>16</p>
-<p><strong>@Context</strong></p>
-<p>可以注入HttpRequest，HttpResponse用</p>
-<p>spring boot 集成 paypal 开源</p>
-<blockquote>
-<p><code>&lt;dependency&gt;</code> <code>&lt;groupId&gt;com.paypal.springboot&lt;/groupId&gt;</code> <code>&lt;artifactId&gt;resteasy-spring-boot-starter&lt;/artifactId&gt;</code> <code>&lt;version&gt;2.3.0-RELEASE&lt;/version&gt;</code> <code>&lt;/dependency&gt;</code></p>
-</blockquote>
-<p>指定 servletMapping 路径 写一个类继承Application ,交给Spring 管理</p>
-<blockquote>
-<p><code>@Component</code> <code>@ApplicationPath(&quot;/v1/&quot;)</code> <code>public  class ApplicationPathImpl extends Application { }</code></p>
-</blockquote>
-<p>编写RESTful 接口</p>
-<blockquote>
-<p><code>@Component</code> <code>@Path(&quot;province/&quot;)</code> <code>public  class ExternalFacadeImpl implements ExternalFacade {</code> <code>/**</code> <code>* http://localhost:8080/v1/province/city/1</code> <code>* @param id</code> <code>* @return</code> <code>*/  @Path(&quot;city/{id}&quot;)</code> <code>@GET</code> <code>@Produces(MediaType.APPLICATION_JSON) @Consumes(MediaType.APPLICATION_JSON)</code> <code>@Override</code> <code>public Result&lt;Boolean&gt; getCity(@PathParam(&quot;id&quot;) Long id) { return  new Result&lt;&gt;();</code> <code>}</code> <code>}</code></p>
-</blockquote>
+          JAX-RS 是代表restful web service 的一套规范api,基于java,用来陈篡关键RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解
+序号
+注解
+描述
+1
+@Path
+类或者方法的相对地址，标注在类或者方法上
 
-          
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/19/spring-boot-e9-9b-86-e6-88-90-resteasy/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1651,9 +1621,15 @@
       
         
           
-            <h1 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h1><p>全称 : Resource Representational State Transfer 翻译 : 资源在网络中以某种表现形式进行状态转移 理解 : 选择通过使用http协议和uri, 利用client/server model 对资源进行CRUD 通俗 : 看url就知道要干什么,看http methond 就知道要干什么,看http status code 就知道请求结果 自我理解: 以往对url的定义是: 打开电脑 /start/computer 关闭电脑 /stop/computer 以RESTful风格来写的话就是: 打开电脑 /computer, http method :GET 关闭电脑 /computer ,http method : PUT</p>
-
-          
+          REST全称 : Resource Representational State Transfer 翻译 : 资源在网络中以某种表现形式进行状态转移 理解 : 选择通过使用http协议和uri, 利用client/server model 对资源进行CRUD 通俗 : 看url就知道要干什么,看ht
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/19/rest-restful/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1821,14 +1797,19 @@
       
         
           
-            <ol>
-<li>解决环境问题 , docker可以打包一套开发环境 image.在任何情况下都不会出现环境问题</li>
-<li>docker 封装了linux 容器,提供弹性的云服务</li>
-<li>在一个docker上可以运行多个容器,可以尝试模拟一套微服务架构</li>
-<li>封装一套装好了 node.js , java , python , mysql 等可能需要到的组件到image,在玩服务器的时候就可以快捷的完成环境的搭建</li>
-</ol>
-
           
+解决环境问题 , docker可以打包一套开发环境 image.在任何情况下都不会出现环境问题
+docker 封装了linux 容器,提供弹性的云服务
+在一个docker上可以运行多个容器,可以尝试模拟一套微服务架构
+封装一套装好了 node.js , java , python , mysql 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/18/docker-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1996,9 +1977,15 @@
       
         
           
-            <p>Docker安装: centos7 上的安装方法: # 查看当前内核版本 <code>$ sudo uname -r</code> # 安装Docker <code>$ sudo yum -y install docker</code> # 启动Docker <code>$ sudo service docker start</code> #测试 <code>$ sudo docker run hello-world</code> #设置docker 开机启动 <code>$ sudo systemctl enable docker</code> docker 清理命令 #杀死所有正在运行的容器 <code>$ sudo docker kill $(docker ps -a -q)</code> #删除所有已经停止的容器 <code>$ sudo docker rm $(docker ps -a -q)</code></p>
-
-          
+          Docker安装: centos7 上的安装方法: # 查看当前内核版本 $ sudo uname -r # 安装Docker $ sudo yum -y install docker # 启动Docker $ sudo service docker start #测试 $ sudo docker 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/13/docker/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
