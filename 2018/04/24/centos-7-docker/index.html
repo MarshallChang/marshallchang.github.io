@@ -115,17 +115,17 @@
 
 
 
-  <meta name="description" content="错误:  One of the configured repositories failed (Docker CE Stable - x86_64), and yum doesn’t have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few w">
+  <meta name="description" content="错误:123456One of the configured repositories failed (Docker CE Stable - x86\_64), and yum doesn&amp;apos;t have enough cached data to continue. At this point the only safe thing yum can do is fail. There a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos 7 使用yum 安装docker 报错">
 <meta property="og:url" content="marshallchang.github.io/2018/04/24/centos-7-docker/index.html">
 <meta property="og:site_name" content="Marshall&amp;Yannie">
-<meta property="og:description" content="错误:  One of the configured repositories failed (Docker CE Stable - x86_64), and yum doesn’t have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few w">
+<meta property="og:description" content="错误:123456One of the configured repositories failed (Docker CE Stable - x86\_64), and yum doesn&amp;apos;t have enough cached data to continue. At this point the only safe thing yum can do is fail. There a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-04T12:00:23.435Z">
+<meta property="og:updated_time" content="2018-07-06T07:21:19.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos 7 使用yum 安装docker 报错">
-<meta name="twitter:description" content="错误:  One of the configured repositories failed (Docker CE Stable - x86_64), and yum doesn’t have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few w">
+<meta name="twitter:description" content="错误:123456One of the configured repositories failed (Docker CE Stable - x86\_64), and yum doesn&amp;apos;t have enough cached data to continue. At this point the only safe thing yum can do is fail. There a">
 
 
 
@@ -363,7 +363,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-04 20:00:23" itemprop="dateModified" datetime="2018-06-04T20:00:23+08:00">2018-06-04</time>
+                <time title="Modified: 2018-07-06 15:21:19" itemprop="dateModified" datetime="2018-07-06T15:21:19+08:00">2018-07-06</time>
               
             
           </span>
@@ -414,11 +414,11 @@
       
 
       
-        <p>错误:</p>
-<blockquote>
-<p>One of the configured repositories failed (Docker CE Stable - x86_64), and yum doesn’t have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few ways to work “fix” this: 1. Contact the upstream for the repository and get them to fix the problem. 2. Reconfigure the baseurl/etc. for the repository, to point to a working upstream. This is most often useful if you are using a newer distribution release than is supported by the repository (and the packages for the previous distribution release still work). 3. Run the command with the repository temporarily disabled yum –disablerepo=docker-ce-stable … 4. Disable the repository permanently, so yum won’t use it by default. Yum will then just ignore the repository until you permanently enable it again or use –enablerepo for temporary usage: yum-config-manager –disable docker-ce-stable or subscription-manager repos –disable=docker-ce-stable 5. Configure the failing repository to be skipped, if it is unavailable. Note that yum will try to contact the repo. when it runs most commands, so will have to try and fail each time (and thus. yum will be be much slower). If it is a very temporary problem though, this is often a nice compromise: yum-config-manager –save –setopt=docker-ce-stable.skip_if_unavailable=true failure: repodata/repomd.xml from docker-ce-stable: [Errno 256] No more mirrors to try. <a href="https://download-stage.docker.com/linux/centos/7/x86\_64/stable/repodata/repomd.xml" target="_blank" rel="noopener">https://download-stage.docker.com/linux/centos/7/x86\_64/stable/repodata/repomd.xml</a>: [Errno 14] curl#7 - “Failed to connect to 2600:9000:2012:6c00:4:1d08:9b80:93a1: 网络不可达”</p>
-</blockquote>
-<p>错误原因:docker-ce.repo中配置的镜像站无法找到对应的镜像 解决办法:将docker-ce.repo(linux查找方法: find -name docker-ce.repo) 中的镜像地址替换为中科院提供的镜像地址 [docker-ce-stable] name=Docker CE Stable - $basearch baseurl=<a href="https://mirrors.ustc.edu.cn/docker-ce/linux/centos/7/$basearch/stable" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/docker-ce/linux/centos/7/$basearch/stable</a> enabled=1 gpgcheck=1 gpgkey=<a href="https://mirrors.ustc.edu.cn/docker-ce/linux/centos/gpg" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/docker-ce/linux/centos/gpg</a></p>
+        <h5 id="错误"><a href="#错误" class="headerlink" title="错误:"></a>错误:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">One of the configured repositories failed (Docker CE Stable - x86\_64), and yum doesn&apos;t have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few ways to work &quot;fix&quot; this: </span><br><span class="line">1. Contact the upstream for the repository and get them to fix the problem.</span><br><span class="line">2. Reconfigure the baseurl/etc. for the repository, to point to a working upstream. This is most often useful if you are using a newer distribution release than is supported by the repository (and the packages for the previous distribution release still work). </span><br><span class="line">3. Run the command with the repository temporarily disabled yum --disablerepo=docker-ce-stable ... </span><br><span class="line">4. Disable the repository permanently, so yum won&apos;t use it by default. Yum will then just ignore the repository until you permanently enable it again or use --enablerepo for temporary usage: yum-config-manager --disable docker-ce-stable or subscription-manager repos --disable=docker-ce-stable </span><br><span class="line">5. Configure the failing repository to be skipped, if it is unavailable. Note that yum will try to contact the repo. when it runs most commands, so will have to try and fail each time (and thus. yum will be be much slower). If it is a very temporary problem though, this is often a nice compromise: yum-config-manager --save --setopt=docker-ce-stable.skip\_if\_unavailable=true failure: repodata/repomd.xml from docker-ce-stable: \[Errno 256\] No more mirrors to try. https://download-stage.docker.com/linux/centos/7/x86\_64/stable/repodata/repomd.xml: \[Errno 14\] curl#7 - &quot;Failed to connect to 2600:9000:2012:6c00:4:1d08:9b80:93a1: 网络不可达&quot;</span><br></pre></td></tr></table></figure>
+<h6 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因:"></a>错误原因:</h6><p><code>docker-ce.repo</code>中配置的镜像站无法找到对应的镜像 </p>
+<h6 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h6><p>将<code>docker-ce.repo</code>(linux查找方法: <code>find -name docker-ce.repo</code>)<br>中的镜像地址替换为中科院提供的镜像地址 </p>
+<p><code>[docker-ce-stable\] name=Docker CE Stable - $basearch baseurl=
+https://mirrors.ustc.edu.cn/docker-ce/linux/centos/7/$basearch/stable enabled=1 gpgcheck=1 gpgkey=https://mirrors.ustc.edu.cn/docker-ce/linux/centos/gpg</code></p>
 
       
     </div>
@@ -531,8 +531,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -551,7 +560,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -619,6 +628,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#错误"><span class="nav-number">1.</span> <span class="nav-text">错误:</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#错误原因"><span class="nav-number">1.1.</span> <span class="nav-text">错误原因:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#解决办法"><span class="nav-number">1.2.</span> <span class="nav-text">解决办法:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

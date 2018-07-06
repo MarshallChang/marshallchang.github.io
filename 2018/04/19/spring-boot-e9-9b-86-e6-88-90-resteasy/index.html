@@ -115,17 +115,17 @@
 
 
 
-  <meta name="description" content="JAX-RS 是代表restful web service 的一套规范api,基于java,用来陈篡关键RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解 序号 注解 描述 1 @Path 类或者方法的相对地址，标注在类或者方法上 2 @GET HTTP GET请求用，用来获取资源 3 @PUT HTTP PUT 请求，用来创建资">
+  <meta name="description" content="JAX-RS 是代表restful web service 的一套规范api,基于java,用来提供RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解    序号 注解 描述     1 @Path 类或者方法的相对地址，标注在类或者方法上   2 @GET HTTP GET请求用，用来获取资源   3 @PUT HTTP PUT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Boot 集成 RESTeasy">
 <meta property="og:url" content="marshallchang.github.io/2018/04/19/spring-boot-e9-9b-86-e6-88-90-resteasy/index.html">
 <meta property="og:site_name" content="Marshall&amp;Yannie">
-<meta property="og:description" content="JAX-RS 是代表restful web service 的一套规范api,基于java,用来陈篡关键RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解 序号 注解 描述 1 @Path 类或者方法的相对地址，标注在类或者方法上 2 @GET HTTP GET请求用，用来获取资源 3 @PUT HTTP PUT 请求，用来创建资">
+<meta property="og:description" content="JAX-RS 是代表restful web service 的一套规范api,基于java,用来提供RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解    序号 注解 描述     1 @Path 类或者方法的相对地址，标注在类或者方法上   2 @GET HTTP GET请求用，用来获取资源   3 @PUT HTTP PUT">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-04T12:00:23.435Z">
+<meta property="og:updated_time" content="2018-07-06T07:32:28.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot 集成 RESTeasy">
-<meta name="twitter:description" content="JAX-RS 是代表restful web service 的一套规范api,基于java,用来陈篡关键RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解 序号 注解 描述 1 @Path 类或者方法的相对地址，标注在类或者方法上 2 @GET HTTP GET请求用，用来获取资源 3 @PUT HTTP PUT 请求，用来创建资">
+<meta name="twitter:description" content="JAX-RS 是代表restful web service 的一套规范api,基于java,用来提供RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解    序号 注解 描述     1 @Path 类或者方法的相对地址，标注在类或者方法上   2 @GET HTTP GET请求用，用来获取资源   3 @PUT HTTP PUT">
 
 
 
@@ -363,7 +363,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-04 20:00:23" itemprop="dateModified" datetime="2018-06-04T20:00:23+08:00">2018-06-04</time>
+                <time title="Modified: 2018-07-06 15:32:28" itemprop="dateModified" datetime="2018-07-06T15:32:28+08:00">2018-07-06</time>
               
             
           </span>
@@ -414,71 +414,103 @@
       
 
       
-        <p>JAX-RS 是代表restful web service 的一套规范api,基于java,用来陈篡关键RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解</p>
-<p>序号</p>
-<p>注解</p>
-<p>描述</p>
-<p>1</p>
-<p><strong>@Path</strong></p>
-<p>类或者方法的相对地址，标注在类或者方法上</p>
-<p>2</p>
-<p><strong>@GET</strong></p>
-<p>HTTP GET请求用，用来获取资源</p>
-<p>3</p>
-<p><strong>@PUT</strong></p>
-<p>HTTP PUT 请求，用来创建资源</p>
-<p>4</p>
-<p><strong>@POST</strong></p>
-<p>HTTP POST 请求, 用来创建或者更新资源</p>
-<p>5</p>
-<p><strong>@DELETE</strong></p>
-<p>HTTP DELETE请求, 用来删除资源</p>
-<p>6</p>
-<p><strong>@HEAD</strong></p>
-<p>HTTP HEAD请求, 用来获取一个接口是否可用的状态</p>
-<p>7</p>
-<p><strong>@Produces</strong></p>
-<p>返回数据的格式比如APPLICATION/XML, TEXT/HTML, APPLICATION/JSON</p>
-<p>8</p>
-<p><strong>@Consumes</strong></p>
-<p>请求数据格式 , 如json</p>
-<p>9</p>
-<p><strong>@PathParam</strong></p>
-<p>绑定url里面的参数</p>
-<p>10</p>
-<p><strong>@QueryParam</strong></p>
-<p>绑定url后面的参数（？后面的）</p>
-<p>11</p>
-<p><strong>@MatrixParam</strong></p>
-<p>绑定包含多个 property (属性)=value(值) 方法参数表达式</p>
-<p>12</p>
-<p><strong>@HeaderParam</strong></p>
-<p>给header里面传参</p>
-<p>13</p>
-<p><strong>@CookieParam</strong></p>
-<p>给cookie里面传参</p>
-<p>14</p>
-<p><strong>@FormParam</strong></p>
-<p>给form传参</p>
-<p>15</p>
-<p><strong>@DefaultValue</strong></p>
-<p>给参数一个默认值</p>
-<p>16</p>
-<p><strong>@Context</strong></p>
-<p>可以注入HttpRequest，HttpResponse用</p>
-<p>spring boot 集成 paypal 开源</p>
-<blockquote>
-<p><code>&lt;dependency&gt;</code> <code>&lt;groupId&gt;com.paypal.springboot&lt;/groupId&gt;</code> <code>&lt;artifactId&gt;resteasy-spring-boot-starter&lt;/artifactId&gt;</code> <code>&lt;version&gt;2.3.0-RELEASE&lt;/version&gt;</code> <code>&lt;/dependency&gt;</code></p>
-</blockquote>
+        <p>JAX-RS 是代表restful web service 的一套规范api,基于java,用来提供RESTful 风格的Web services 服务. JAX-RS 使用一系列注解来简化java开发. 规范常用注解</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>注解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>@Path</strong></td>
+<td>类或者方法的相对地址，标注在类或者方法上</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>@GET</strong></td>
+<td>HTTP GET请求用，用来获取资源</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>@PUT</strong></td>
+<td>HTTP PUT 请求，用来创建资源</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>@POST</strong></td>
+<td>HTTP POST 请求, 用来创建或者更新资源</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>@DELETE</strong></td>
+<td>HTTP DELETE请求, 用来删除资源</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>@HEAD</strong></td>
+<td>HTTP HEAD请求, 用来获取一个接口是否可用的状态</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>@Produces</strong></td>
+<td>返回数据的格式比如APPLICATION/XML, TEXT/HTML, APPLICATION/JSON</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>@Consumes</strong></td>
+<td>请求数据格式 , 如json</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>@PathParam</strong></td>
+<td>绑定url里面的参数</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>@QueryParam</strong></td>
+<td>绑定url后面的参数（？后面的）</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>@MatrixParam</strong></td>
+<td>绑定包含多个 property (属性)=value(值) 方法参数表达式</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>@HeaderParam</strong></td>
+<td>给header里面传参</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>@CookieParam</strong></td>
+<td>给cookie里面传参</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>@FormParam</strong></td>
+<td>给form传参</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>@DefaultValue</strong></td>
+<td>给参数一个默认值</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>@Context</strong></td>
+<td>可以注入HttpRequest，HttpResponse用</td>
+</tr>
+</tbody>
+</table>
+<p>spring boot 集成 paypal 开源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.paypal.springboot&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;resteasy-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;2.3.0-RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
 <p>指定 servletMapping 路径 写一个类继承Application ,交给Spring 管理</p>
-<blockquote>
-<p><code>@Component</code> <code>@ApplicationPath(&quot;/v1/&quot;)</code> <code>public  class ApplicationPathImpl extends Application { }</code></p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">@ApplicationPath(&quot;/v1/&quot;)</span><br><span class="line">public class ApplicationPathImpl extends Application &#123; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>编写RESTful 接口</p>
-<blockquote>
-<p><code>@Component</code> <code>@Path(&quot;province/&quot;)</code> <code>public  class ExternalFacadeImpl implements ExternalFacade {</code> <code>/**</code> <code>* http://localhost:8080/v1/province/city/1</code> <code>* @param id</code> <code>* @return</code> <code>*/  @Path(&quot;city/{id}&quot;)</code> <code>@GET</code> <code>@Produces(MediaType.APPLICATION_JSON) @Consumes(MediaType.APPLICATION_JSON)</code> <code>@Override</code> <code>public Result&lt;Boolean&gt; getCity(@PathParam(&quot;id&quot;) Long id) { return  new Result&lt;&gt;();</code> <code>}</code> <code>}</code></p>
-</blockquote>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">@Path(&quot;province/&quot;)</span><br><span class="line">public class ExternalFacadeImpl implements ExternalFacade &#123;</span><br><span class="line">  /**</span><br><span class="line">   * http://localhost:8080/v1/province/city/1</span><br><span class="line">   * @param id</span><br><span class="line">   * @return</span><br><span class="line">   */</span><br><span class="line">   @Path(&quot;city/&#123;id&#125;&quot;)</span><br><span class="line">   @GET</span><br><span class="line">   @Produces(MediaType.APPLICATION_JSON) @Consumes(MediaType.APPLICATION_JSON)</span><br><span class="line">   @Override</span><br><span class="line">   public Result&lt;Boolean&gt; getCity(@PathParam(&quot;id&quot;) Long id) &#123; return  new Result&lt;&gt;();</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -610,7 +642,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
